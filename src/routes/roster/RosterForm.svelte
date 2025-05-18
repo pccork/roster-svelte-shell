@@ -35,7 +35,7 @@
           return;
         }
         if (rosterEvent) rosterEvent(roster);
-        message = `Thanks! You completed ${hour} hours with ${agency.code} ${agency.agencyName}`;
+        message = `Thanks! You completed ${hour} hours with ${agency.code} ${agency.AgencyName}`;
       }
     } else {
       message = "Please select hour, profession and agency";
@@ -63,7 +63,7 @@
       <div class="select">
         <select bind:value={selectedAgency}>
           {#each currentAgencies.agencies as agency}
-          <option value={agency._id}>{agency.code},{agency.agencyName}</option>
+          <option value={agency._id}>{agency.code},{agency.AgencyName}</option>
           {/each}
         </select>
       </div>

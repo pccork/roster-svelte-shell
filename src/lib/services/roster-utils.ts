@@ -18,7 +18,7 @@ export function computeByAgency(rosterList: Roster[], agencies: Agency[]) {
   agencies.forEach((agency) => {
     currentDataSets.rostersByAgency.labels.push(
       // @ts-ignore
-      `${agency.code}`
+      `${agency.AgencyName},${agency.code}`
     );
     currentDataSets.rostersByAgency.datasets[0].values.push(0);
   });
@@ -39,7 +39,7 @@ export async function refreshRosterMap (map:LeafletMap) {
   const rosters = await rosterService.getRosters(loggedInUser.token);
   rosters.forEach((roster: Roster) => {
       if (typeof roster.agency !== "string") {
-        const popup = `${roster.agency.agencyName} ${roster.agency.code}: €${roster.hour}`;
+        const popup = `${roster.agency.AgencyName} ${roster.agency.code}: €${roster.hour}`;
         map.addMarker(roster.lat, roster.lng, popup);
       }
     });

@@ -8,8 +8,7 @@
     let email = $state("");
     let password = $state("");
     let message = $state("");
-    const ADMIN_EMAIL = "homer@simpson.com";
-    const ADMIN_PASSWORD = "secret";
+    
   
     async function login() {
       // Fallback defaults

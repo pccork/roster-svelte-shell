@@ -1,10 +1,13 @@
 <script lang="ts">
     import { currentDataSets } from "$lib/runes.svelte";
    
+    
     // @ts-ignore
     import Chart from "svelte-frappe-charts";
+    
     import Card from "$lib/ui/Card.svelte";
-  
+
+   
     
   </script>
 
@@ -19,6 +22,10 @@
         <Chart data={currentDataSets.rostersByProfession} type="pie" />
       </Card>
     </div>
+    
+    
+   
+
   </div>
 
 
